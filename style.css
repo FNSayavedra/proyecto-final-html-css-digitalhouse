@@ -1,0 +1,280 @@
+/*Normalizacion:*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Para que el padding y el border no afecten al ancho del elemento*/
+    font-family: 'Inconsolate', monospace; 
+    list-style: none; /*Para quitar los puntos de las listas*/
+    text-decoration: none; /*Para quitar el subrayado de los links*/
+    color: white;
+}
+
+/* TODO: borrar cuando tengamos el fondo final */
+body {
+    background-color: #1a1a1a; 
+}
+
+header {
+    position: fixed; /*Para que se quede fijo en la parte superior de la pantalla*/
+    right: 0;
+    top: 0;
+    z-index: 100; /*Para que esté por encima de todo*/
+    width: 100%;   /*Para que ocupe todo el ancho de la pantalla*/
+    display: flex;/*Para que los elementos se pongan en línea*/
+    align-items: center; /*Para que los elementos se pongan en el centro verticalmente*/
+    justify-content: space-between; /*Para que los elementos se pongan en los extremos*/
+    padding: 15px 3%; /*Para que haya un espacio entre el borde y el contenido*/
+    background-color: transparent; /*Para que sea transparente*/
+}
+
+
+.logo {
+    font-size: 30px; /*Para que el texto sea más grande*/
+    font-weight: 800; /*Para que el texto sea más grueso*/
+}
+
+.navlist {
+    display: flex; /*Para que los elementos se pongan en línea*/
+
+}
+
+.navlist a {
+    margin-left: 60px; /*Para que haya un espacio entre los elementos*/
+    font-size: 15px; /*Para que el texto sea más grande*/
+    font-weight: 600; /*Para que el texto sea más grueso*/
+    border-bottom: 2px solid transparent; /*Para que haya una línea debajo del texto transparente*/
+    transition: all .5s ease; /*Para que haya una transición*/
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white; /*Para que haya una línea debajo del texto blanca*/
+}
+
+.menu-icon {
+    
+    display: none; /*Para que solo se vea en movil o tablet*/
+}
+
+#menu-icon {
+    color: white; /*Para que el icono sea blanco*/
+    font-size: 35px; /*Para que el icono sea más grande*/
+    z-index: 105;   /*Para que esté por encima de todo*/
+    cursor: pointer; /*Para que el cursor sea una mano*/
+}
+
+#menu-toggle {
+    display: none; /*Para que no se muestre nunca el checkbox*/
+}
+
+.menu-icon-action {
+    display: none; /*Para que no se muestre nunca el icono de menu en desktop*/
+}
+
+.hero {
+    height: 100%; /*Para que ocupe todo el alto de la pantalla*/
+    width: 100%; /*Para que ocupe todo el ancho de la pantalla*/
+    min-height: 100vh; /*Para que ocupe todo el alto de la pantalla aunque no haya contenido*/
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /*Para que haya un degradado de colores*/
+    position: relative; /*Para que los elementos hijos se posicionen relativamente a este, nos permite usar top, bottom, left o right*/
+    display: grid; /*Para que los elementos se pongan en grid*/
+    grid-template-columns: 1fr 1fr; /*Para que haya dos columnas*/
+    align-items: center; /*Para que los elementos se pongan en el centro verticalmente*/
+    gap: 2rem; /*Para que haya un espacio entre los elementos*/
+}
+
+section {
+    padding: 0 8%; /*Para que haya un espacio entre el borde y el contenido*/
+}
+
+.hero-text h1 {
+    font-family: 'Roboto Mono', monospace; /*Para que el texto sea de la fuente Roboto Mono*/
+    font-size: 50px; /*Para que el texto sea más grande*/
+    line-height: 1; /*Para que haya un espacio entre las líneas*/
+    margin: 0 0 30px; /*Para que haya un espacio entre los elementos*/
+}
+
+.hero-text h5 {
+    font-size: 14px; /*Para que el texto sea más grande*/
+    font-weight: 400; /*Para que el texto sea más grueso*/
+    margin-bottom: 25px; /*Para que haya un espacio entre los elementos*/
+}
+
+.hero-text h4 {
+    font-size: 18px; /*Para que el texto sea más grande*/
+    font-weight: 600; /*Para que el texto sea más grueso*/
+    margin-bottom: 10px; /*Para que haya un espacio entre los elementos*/
+}
+
+.hero-text p {
+    font-size: 80%; /*Para que el texto sea más grande*/
+    line-height: 1.9;   /*Para que haya un espacio entre las líneas*/
+    margin-bottom: 40px; /*Para que haya un espacio entre los elementos*/
+}
+
+.hero-img img {
+    width: 400px;
+    margin: 10% 0 0 10%; /*Para que haya un espacio entre los elementos*/
+    height: auto; /*Para que la altura se ajuste automáticamente*/
+    transition: all 5s linear; /*Para que haya una transición*/
+}
+
+.hero-img img:hover {
+    width: 450px; /*Para que la imagen sea más grande*/
+    opacity: 0.6; /*Para que la imagen sea más transparente*/
+}
+
+.hero-text a {
+    display: inline-block; /*Va a permitir q le demos un alto y un ancho a los elementos*/
+    padding: 15px 30px; /*Para que haya un espacio entre el borde y el contenido*/
+    background-color: #4d4d4d; /*Para que el fondo sea gris*/
+    border: 1px solid transparent; /*Para que haya un borde gris*/
+    line-height: 1.4; /*Para que haya un espacio entre las líneas*/
+    font-size: 14px; /*Para que el texto sea más grande*/
+    font-weight: 500; /*Para que el texto sea más grueso*/
+    border-radius: 30px; /*Para que haya una esquina redondeada*/
+    text-transform: uppercase; /*Para que el texto sea en mayúsculas*/
+    transition: all .5s ease; /*Para que haya una transición*/
+}
+
+.hero-text a:hover {
+    background-color: transparent; /*Para que el fondo sea transparente*/
+    border: 1px solid white; /*Para que haya un borde blanco*/
+    transform: translateX(8px); /*Para que haya una transición*/
+}
+
+.hero-text a.videos{
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.videos i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute; /*Para que los elementos se posicionen absolutamente a la pantalla*/
+    top: 50vh; /*Para que estén en la mitad de la pantalla*/
+    padding: 0 3%; /*Para que haya un espacio entre el borde y el contenido*/
+    transform: translateY(-50%); /*Para que los elementos se pongan en la mitad de la pantalla*/
+}
+
+.icons i {
+    display: block; /*Para que los elementos se pongan en bloque*/
+    margin: 26px 0; /*Para que haya un espacio entre los elementos*/
+    transition: all .5s ease; /*Para que haya una transición*/
+    font-size: 24px; /*Para que el icono sea más grande*/
+}
+
+.icons i:hover {
+    color: #4d4d4d; /*Para que el icono sea gris*/
+    transform: translateY(-5px); /*Para que haya una transición*/
+}
+
+.scroll-down {
+    position: absolute; /*Para que los elementos se posicionen absolutamente a la pantalla*/
+    bottom: 6%; /*Para que estén en la parte inferior de la pantalla*/
+    right: 3%; /*Para que estén en la parte derecha de la pantalla*/
+
+}
+
+.scroll-down i {
+    display: block; /*Para que los elementos se pongan en bloque*/
+    padding: 12px; /*Para que haya un espacio entre el borde y el contenido*/
+    font-size: 25px; /*Para que el icono sea más grande*/
+    background-color: #21383d; /*Para que el fondo sea gris*/
+    border-radius: 30px; /*Para que haya una esquina redondeada*/
+    transition: all .5s ease; /*Para que haya una transición*/
+}
+
+.scroll-down i:hover {
+    
+    transform: translateY(-5px); 
+}
+
+/*vamos a hacer media queries para que sea responsive*/
+
+@media screen   and (max-width: 992px) {
+    section {
+        padding: 0 3%; /*Para que haya un espacio entre el borde y el contenido*/
+    }
+
+    .hero-text {
+        padding-top: 0; /*Para que no haya un espacio entre el borde y el contenido*/
+    }
+
+    .hero-img {
+        text-align: center; /*Para que el texto se ponga en el centro*/
+    }
+   
+    .icons {
+        display: none; /*Para que no se muestren los iconos*/
+    }
+
+    .hero-text p {
+        font-size: 65%; /*Para que el texto sea más grande*/
+       
+    }
+
+    .hero-img img {
+        width: 80%; /*Para que la imagen ocupe el 80% del ancho de la pantalla*/
+        margin: 10% 0 0 10%; /*Para que no haya un espacio entre los elementos*/
+    }
+
+    .scroll-down {
+        display: none; /*Para que no se muestre el icono de scroll*/
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-icon-action {
+        display: block; /*Para que se muestre el icono de menu en movil o tablet*/
+    }
+
+    #menu-icon {
+        display: block; /*Para que no se muestre el icono de menu en desktop*/
+    }
+
+    .hero-text {
+        text-align: center; /*Para que el texto se ponga en el centro*/
+        padding-top: 100px; /*Para que haya un espacio entre el borde y el contenido*/
+    }
+
+    .hero-img img {
+        margin: 0; /*Para que no haya un espacio entre los elementos*/
+    }
+   
+    .hero {
+        height: 100%; /*Para que ocupe todo el alto de la pantalla*/
+        gap: 1rem; /*Para que haya un espacio entre los elementos*/
+        grid-template-columns: 1fr; /*Para que haya una columna*/
+
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%; /*Para que esté fuera de la pantalla*/
+        width: 200px;
+        height: 180px;
+        background-color: #020b16a6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .5s ease-out;
+        border-radius: 30px 0 0 30px;
+    }
+
+    .navlist a {
+        display: block;
+        margin: 7px 0;
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + ul {
+        right: 0; /*Para que esté en la pantalla*/
+    }
+
+}
